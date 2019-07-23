@@ -51,3 +51,9 @@ We have learned that closures allow us to access values in scope that have alrea
 
 * [ ] Go back through the stretch problems that you skipped over and complete as many as you can.
 * [ ] Look up what an IIFE is in JavaScript and experiment with them
+    var alpha = (function () {
+    var name = "Arya"; 
+    return name; 
+})(); <-- IIFE is an Immediately Invoked Function Expression. You don't have to call it later with console.log. You already have it invoked so all you have to do is type the name of the variable that the function is assigned to.
+ 
+alpha; // "Arya"

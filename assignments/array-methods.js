@@ -78,6 +78,24 @@ console.log(ticketPriceTotal);
 
 // Problem 1
 
+//We need a new list to only have the person's name and email so that we can send them ads and donation links. Also to potentially sell to a third party.
+let namesAndEmails = runners.map( function(arrayItem){
+    return { first_name: arrayItem.first_name, last_name: arrayItem.last_name, email: arrayItem.email}
+  })
+console.log(namesAndEmails);
 // Problem 2
 
+//We want to host a gala that only the richest donors are allowed to attend. Make a list of donors that have donated over $250.
+let theElite = runners.filter( function(arrayItem){
+    return arrayItem.donation > 250;
+  })
+  
+  
+  
+  console.log(theElite);
 // Problem 3
+//We need to make a banner with all of the rich runners names and how much they have donated. It's for the gala. 
+let galaBanner = theElite.map( function(arrayItem){
+    return { first_name: arrayItem.first_name, last_name: arrayItem.last_name, donation: arrayItem.donation}
+  });
+console.log(galaBanner);
